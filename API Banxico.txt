@@ -1,0 +1,42 @@
+API Banxico
+
+Este programa es una herramienta desarrollada en Python que se encarga de obtener datos económicos desde la API del Banco de México (Banxico) para una serie de datos específica, dentro de un rango de fechas determinado. A continuación, se explica de forma detallada qué hace el programa, cómo fue construido y para qué podría ser útil:
+
+¿Qué hace el programa?
+-Obtención de datos: El programa realiza una solicitud HTTP a la API de Banxico utilizando una URL que incluye la serie de datos y el rango de fechas que se desea consultar.
+
+-Procesamiento de la respuesta: Una vez recibida la respuesta en formato JSON, el programa verifica que la estructura de los datos sea la esperada y extrae la información relevante.
+
+-Visualización y almacenamiento: Utiliza la biblioteca pandas para convertir los datos en un DataFrame, mostrando en consola las primeras y últimas 5 filas de la información. Además, guarda los datos obtenidos en archivos CSV y Excel para su posterior análisis o consulta.
+
+¿Cómo se hizo el programa?
+
+Librerías y módulos utilizados:
+Se usaron librerías populares como requests para realizar las solicitudes HTTP y pandas para la manipulación y análisis de datos.
+La biblioteca python-dotenv se emplea para cargar variables de entorno desde un archivo llamado banx.env, lo que ayuda a mantener el token de acceso (información sensible) fuera del código fuente.
+
+logging se implementa para registrar eventos y errores, proporcionando mensajes informativos en la consola que facilitan la depuración y el seguimiento de la ejecución.
+
+Estructura del código:
+El código se organiza en funciones, con una función principal (main) que centraliza la ejecución del programa.
+Se incorpora la cláusula if __name__ == '__main__': para permitir que el script sea ejecutable directamente desde la línea de comandos, sin necesidad de utilizar un entorno de desarrollo integrado (IDE).
+
+La inclusión de una "shebang" (#!/usr/bin/env python3) al inicio del archivo facilita la ejecución en sistemas Unix/Linux/Mac.
+
+¿Para qué te serviría este programa?
+
+Análisis económico: Ideal para investigadores, economistas o analistas financieros que necesiten acceder de forma automatizada a datos económicos publicados por el Banco de México.
+
+Automatización de reportes: Puede ser integrado en flujos de trabajo que requieran la actualización periódica de datos económicos, permitiendo la generación automática de reportes en formatos CSV o Excel.
+
+Aprendizaje y desarrollo: Es un buen ejemplo práctico de cómo interactuar con APIs externas, manejar información sensible de manera segura, y utilizar bibliotecas populares de Python para el manejo de datos y la gestión de errores.
+
+Integración en sistemas más grandes: La estructura modular del programa permite que se pueda integrar en sistemas o aplicaciones más complejas, donde se requiera la obtención y procesamiento de datos financieros de manera confiable y automatizada.
+
+En resumen, este programa combina buenas prácticas de seguridad y manejo de errores con la funcionalidad de extraer y procesar datos económicos, facilitando su análisis y utilización en diversas aplicaciones y entornos de trabajo.
+
+Creado por Jesús Gibran Montoya Aguero
+
+ID 00000248274
+
+INSTITUTO TECNOLÓGICO DE SONORA
